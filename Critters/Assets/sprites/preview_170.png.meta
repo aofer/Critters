@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: b393472a76d68134abc0e081b445bb3b
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: 0
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: preview_170_0
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 416
+        width: 330
+        height: 330
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_1
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 414
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_2
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 614
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_3
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 608
+        width: 107
+        height: 117
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_4
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 413
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_5
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 46
+        width: 333
+        height: 332
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_6
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 46
+        width: 222
+        height: 222
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_7
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 246
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_8
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 233
+        width: 108
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: preview_170_9
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 45
+        width: 111
+        height: 111
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 
