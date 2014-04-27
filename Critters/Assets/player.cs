@@ -27,7 +27,7 @@ public class player : MonoBehaviour {
 		if(Mathf.Abs(Input.GetAxis("Horizontal")) < 0.1){
 			if(isWalking){
 				anim.SetBool("isWalking", false);
-				isWalking = false;
+				isWalking = false;  
 			}
 		} else {
 			if(!isWalking){
