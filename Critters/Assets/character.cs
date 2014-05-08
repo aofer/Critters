@@ -10,8 +10,6 @@ public class character : MonoBehaviour {
 	public float maxSpeed = 100.0f;
 	public float gravity = 300.0f;
 	public float jumpHeight = 1000.0f;
-	public float jumpSpeed = 100.0f;
-	public float hangTime = 1;
 	
 	private float angleInDegrees = 0.0f;
 	private float scale_x;
@@ -20,8 +18,8 @@ public class character : MonoBehaviour {
 	private float velocity_y;
 	private float angleInRadians;
 	private float restartSpeed;
-	private float tempYLocation;
 	private float tempTime = 0.0f;
+	private bool isTouchingWall = false;
 	private bool isJumping = false;
 	private bool isInAir = true;
 	private static double RADIANS_IN_DEGREE = 0.0174532925;
@@ -37,7 +35,7 @@ public class character : MonoBehaviour {
 		scale_x = Mathf.Cos(angleInRadians);
 		scale_y = Mathf.Sin(angleInRadians);
 		velocity_x = (speed * scale_x * Time.deltaTime);
-		velocity_y = (speed * scale_y * Time.deltaTime);
+//		velocity_y = (speed * scale_y * Time.deltaTime);
 		
 //		print(scale_x + ", " + scale_y + ",  " + velocity_x + ", " + velocity_y);
 		
@@ -47,7 +45,7 @@ public class character : MonoBehaviour {
 			if(angleInDegrees != 180){
 				angleInDegrees = 180;
 			}
-			transform.Translate(new Vector2(velocity_x, velocity_y));
+			transform.Translate(new Vector2(velocity_x, 0));
 		}
 
 		if(Input.GetKey("right")){
@@ -56,45 +54,53 @@ public class character : MonoBehaviour {
 			if(angleInDegrees != 0){
 				angleInDegrees = 0;
 			}
-			transform.Translate(new Vector2(velocity_x,velocity_y));
+			transform.Translate(new Vector2(velocity_x,0));
 		}
 		
 		if(Input.GetKeyDown("space") && !isJumping){
 			isJumping = true;
-			tempYLocation = transform.position.y;
-			tempTime = Time.realtimeSinceStartup;
+			isInAir = true;
 		}
 		
 		if(isJumping){
-			if(transform.position.y - tempYLocation <= jumpHeight){
-				velocity_y += jumpSpeed;
 				transform.Translate(new Vector2(velocity_x,velocity_y));
-			} else if(Time.realtimeSinceStartup - temptTime <= hangTime) { 
-				if(velocity_y != 0)
-					velocity_y = 0;
-			} else {
-				isJumping = false;
-				isInAir = true;
-			}
+				velocity_y = velocity_y - gravity;
 		}
 		
 		if(Input.GetKeyUp("left") || Input.GetKeyUp("right")){
 			speed = restartSpeed;
 		}
 		
+		if(isTouchingWall){
+			
+		}
+		
 		if(isInAir){
 			velocity_y -= gravity;
 			transform.Translate(new Vector2(velocity_x,velocity_y));
 		} else {
-			velocity_y = 0;
+			print ("isInAir = false");
+			if(velocity_y != jumpHeight)
+				velocity_y = jumpHeight;
 		}
 	}
 	
 	void OnCollisionEnter2D(Collision2D other){
-		print ("collision");
 		if(other.gameObject.tag.Equals("Floor")){
 			isInAir = false;
-			velocity_y = 0;
+			isJumping = false;
+		}
+		if(other.gameObject.tag.Equals("Wall")){
+			isTouchingWall = true;
+		}
+	}
+	
+	void OnCollisionExit2D(Collision2D other){
+		if(other.gameObject.tag.Equals("Floor")){
+			isInAir = true;
+		}
+		if(other.gameObject.tag.Equals("Wall")){
+			isTouchingWall = false;
 		}
 	}
 }
