@@ -1,9 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\character.cs">
     <Files>
-      <File FileName="Assets\character.cs" Line="108" Column="37" />
-      <File FileName="Assets\TestGUI.cs" Line="14" Column="64" />
+      <File FileName="Assets\character.cs" Line="21" Column="27" />
+      <File FileName="Assets\player.cs" Line="12" Column="33" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

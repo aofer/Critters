@@ -24,9 +24,12 @@ public class character : MonoBehaviour {
 	private bool isJumping = false;
 	private bool isInAir = true;
 	
+	private Animator anim;
+	
 	// Use this for initialization
 	void Start () {
 		restartSpeed = speed;
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -39,6 +42,9 @@ public class character : MonoBehaviour {
 				speed += accelaration;
 			scale_x = -1;
 			transform.Translate(new Vector2(velocity_x, 0));
+			
+			anim.SetBool("isWalking", false);
+			anim.SetBool("isWalkingLeft", true);
 		}
 
 		if(Input.GetKey("right")){
@@ -46,6 +52,14 @@ public class character : MonoBehaviour {
 				speed += accelaration;
 			scale_x = 1;
 			transform.Translate(new Vector2(velocity_x,0));
+			
+			anim.SetBool("isWalking", true);
+			anim.SetBool("isWalkingLeft", false);
+		}
+		
+		if(Input.GetKey("left") || Input.GetKey("right")){
+			anim.SetBool("isIdleLeft", false);
+			anim.SetBool("isIdle", false);
 		}
 		
 		
@@ -68,6 +82,19 @@ public class character : MonoBehaviour {
 		if(Input.GetKeyUp("left") || Input.GetKeyUp("right")){
 			speed = restartSpeed;
 			scale_x = 0;
+			
+			anim.SetBool("isWalking", false);
+			anim.SetBool("isWalkingLeft", false);
+			
+			if(Input.GetKeyUp("left")){
+				print ("LEFT KEY UP");
+				anim.SetBool("isIdleLeft", true);
+				anim.SetBool("isIdle", false);
+			}
+			if(Input.GetKeyUp("right")){
+				anim.SetBool("isIdle", true);
+				anim.SetBool("isIdleLeft", false);
+			}
 		}
 		
 		if(Input.GetKeyDown("space") && !isJumping){
