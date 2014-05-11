@@ -1200,6 +1200,61 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_Sprite: {fileID: 21300006, guid: b393472a76d68134abc0e081b445bb3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &898882849
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 100010, guid: 73bedff27c41f564b9c87a878bf14a23, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 898882852}
+  - 50: {fileID: 898882851}
+  - 61: {fileID: 898882850}
+  m_Layer: 0
+  m_Name: Ceiling Collider
+  m_TagString: Ceiling
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!61 &898882850
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898882849}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Size: {x: 20.7000008, y: 1}
+  m_Center: {x: 0, y: 0}
+--- !u!50 &898882851
+Rigidbody2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 5000004, guid: 73bedff27c41f564b9c87a878bf14a23,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898882849}
+  m_Mass: 9.99999975e-05
+  m_LinearDrag: 0
+  m_AngularDrag: 0
+  m_GravityScale: 0
+  m_FixedAngle: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!4 &898882852
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 400010, guid: 73bedff27c41f564b9c87a878bf14a23, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 898882849}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.03613281, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &913993305
 GameObject:
   m_ObjectHideFlags: 0
@@ -1327,10 +1382,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempForPlay: .100000001
   accelaration: 1
-  speed: 1
-  maxSpeed: 10
-  gravity: .00999999978
-  jumpHeight: .300000012
+  speed: .5
+  maxSpeed: 3
+  gravity: .0109999999
+  jumpHeight: .280000001
 --- !u!61 &941642207
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2066,6 +2121,22 @@ Prefab:
     - target: {fileID: 400000, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
+      propertyPath: speed
+      value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
+      propertyPath: maxSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
+      propertyPath: jumpHeight
+      value: .280000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
+      propertyPath: gravity
+      value: .0109999999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
