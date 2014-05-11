@@ -14,13 +14,11 @@ public class character : MonoBehaviour {
 	public float gravity = 300.0f;
 	public float jumpHeight = 1000.0f;
 	
-	private float angleInDegrees = 0.0f;
 	private float scale_x;
 	private float scale_y;
 	private float velocity_x;
 	private float velocity_y;
 	private float restartSpeed;
-	private bool isTouchingWall = false;
 	private bool isJumping = false;
 	private bool isInAir = true;
 	
@@ -87,7 +85,6 @@ public class character : MonoBehaviour {
 			anim.SetBool("isWalkingLeft", false);
 			
 			if(Input.GetKeyUp("left")){
-				print ("LEFT KEY UP");
 				anim.SetBool("isIdleLeft", true);
 				anim.SetBool("isIdle", false);
 			}
@@ -108,13 +105,17 @@ public class character : MonoBehaviour {
 		if(other.gameObject.tag.Equals("Floor")){
 			isInAir = false;
 			isJumping = false;
-			print ("TOUCHING FLOOR");
+		}
+		if(other.gameObject.tag.Equals("Ceiling")){
+			isJumping = false;
+			if(velocity_y > 0){
+				velocity_y = 0;
+			}
 		}
 	}
 	
 	void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Wall")){
-			print (other.transform.localPosition.x + "," + other.transform.lossyScale.x);
 			if(other.transform.localPosition.x < 0){
 				transform.position = new Vector2(other.transform.position.x + other.transform.lossyScale.x
 				                                 + transform.lossyScale.x/2,transform.position.y);
@@ -141,15 +142,15 @@ public class character : MonoBehaviour {
 	}
 	
 	public string getVelocityX(){
-		if(velocity_x != null)
+//		if(velocity_x != null)
 			return velocity_x.ToString();
-		return "Currently Null";
+//		return "Currently Null";
 	}
 	
 	public string getVelocityY(){
-		if(velocity_y != null)
+//		if(velocity_y != null)
 			return velocity_y.ToString();
-		return "Currently Null";
+//		return "Currently Null";
 	}
 	
 
