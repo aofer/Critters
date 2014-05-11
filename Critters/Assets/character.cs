@@ -20,9 +20,6 @@ public class character : MonoBehaviour {
 	private float velocity_x;
 	private float velocity_y;
 	private float restartSpeed;
-	private float tempTime = 0.0f;
-	private float wallTempPositionX;
-	private float floorTempPositionY;
 	private bool isTouchingWall = false;
 	private bool isJumping = false;
 	private bool isInAir = true;
@@ -82,12 +79,9 @@ public class character : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Floor")){
-			floorTempPositionY = transform.position.y;
 			isInAir = false;
 			isJumping = false;
-		}
-		if(other.gameObject.tag.Equals("Wall")){
-			wallTempPositionX = transform.position.x;
+			print ("TOUCHING FLOOR");
 		}
 	}
 	
@@ -106,7 +100,7 @@ public class character : MonoBehaviour {
 		}
 		if(other.gameObject.tag.Equals("Floor")){
 			transform.position = new Vector2(transform.position.x,other.transform.position.y + 
-			                                 other.transform.lossyScale.y/2 + transform.lossyScale.y/2  + tempForPlay);
+			                                 other.transform.lossyScale.y/2 + transform.lossyScale.y/2  + 0.1f);
 		}
 	}
 	
