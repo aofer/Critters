@@ -19,6 +19,8 @@ public class character : MonoBehaviour {
 	private float angleInRadians;
 	private float restartSpeed;
 	private float tempTime = 0.0f;
+	private float wallTempPositionX;
+	private float floorTempPositionY;
 	private bool isTouchingWall = false;
 	private bool isJumping = false;
 	private bool isInAir = true;
@@ -30,7 +32,7 @@ public class character : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		angleInRadians = angleInDegrees * (float)RADIANS_IN_DEGREE;
 		scale_x = Mathf.Cos(angleInRadians);
 		scale_y = Mathf.Sin(angleInRadians);
@@ -71,36 +73,50 @@ public class character : MonoBehaviour {
 			speed = restartSpeed;
 		}
 		
-		if(isTouchingWall){
-			
-		}
-		
 		if(isInAir){
 			velocity_y -= gravity;
-			transform.Translate(new Vector2(velocity_x,velocity_y));
+   			transform.Translate(new Vector2(velocity_x,velocity_y));
 		} else {
-			print ("isInAir = false");
 			if(velocity_y != jumpHeight)
 				velocity_y = jumpHeight;
 		}
 	}
 	
-	void OnCollisionEnter2D(Collision2D other){
+	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Floor")){
+			floorTempPositionY = transform.position.y;
 			isInAir = false;
 			isJumping = false;
+			print(other.transform.position.y +  other.transform.localScale.y/2);
 		}
 		if(other.gameObject.tag.Equals("Wall")){
-			isTouchingWall = true;
+			wallTempPositionX = transform.position.x;
 		}
 	}
 	
-	void OnCollisionExit2D(Collision2D other){
-		if(other.gameObject.tag.Equals("Floor")){
-			isInAir = true;
-		}
+	void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Wall")){
-			isTouchingWall = false;
+			transform.position = new Vector2(wallTempPositionX,transform.position.y);
+		}
+		if(other.gameObject.tag.Equals("Floor")){
+			transform.position = new Vector2(transform.position.x,other.transform.position.y + other.transform.localScale.y/2 + transform.localScale.y/2);
 		}
 	}
+	
+	void OnTriggerExit2D(Collider2D other){
+		if(other.gameObject.tag.Equals("Floor")){
+			if(!isJumping){
+				velocity_y = 0;
+			}
+			isInAir = true;
+		}
+	}
+	
+	public string getVelocityY(){
+		if(velocity_y != null)
+			return velocity_y.ToString();
+		return "Currently Null";
+	}
+	
+
 }

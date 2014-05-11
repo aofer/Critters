@@ -12,11 +12,10 @@ GameObject:
   - 61: {fileID: 6100000}
   - 50: {fileID: 5000000}
   - 114: {fileID: 11400002}
-  - 114: {fileID: 11400000}
   - 95: {fileID: 9500000}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.66269279, y: -4.44105768, z: 0}
+  m_LocalPosition: {x: -1.31477284, y: 4.13025188, z: 0}
   m_LocalScale: {x: .602443218, y: .602443337, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -38,15 +37,15 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_Mass: .100000001
-  m_LinearDrag: 1.59000003
+  m_Mass: 30
+  m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 20
+  m_GravityScale: 0
   m_FixedAngle: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_Interpolate: 2
+  m_SleepingMode: 0
+  m_CollisionDetection: 1
 --- !u!61 &6100000
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -55,7 +54,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: .650000036, y: 1.31000006}
   m_Center: {x: 0, y: 0}
 --- !u!95 &9500000
@@ -70,23 +69,8 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 3990c8a4b701c1547b2fd64093197fc7, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
-  m_AnimatePhysics: 0
+  m_AnimatePhysics: 1
   m_HasTransformHierarchy: 1
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8c7bf23101c7424295d2119cf628d27, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 100
-  maxSpeed: 6.86000013
-  jumpHeight: 20
-  currentMoveSpeed: 0
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,6 +82,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcd7cdc197687d44900edc525ec98cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  accelaration: 1
+  speed: 1
+  maxSpeed: 10
+  gravity: .00999999978
+  jumpHeight: .300000012
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
