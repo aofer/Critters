@@ -12,5 +12,6 @@ public class TestGUI : MonoBehaviour {
 	}
 	void OnGUI(){
 		GUI.Label(new Rect(Screen.width-200,0,150,150),"Velocity Y = " + charScript.getVelocityY());
+		GUI.Label(new Rect(Screen.width-350,0,150,150),"Velocity X = " + charScript.getVelocityX());
 	}
 }

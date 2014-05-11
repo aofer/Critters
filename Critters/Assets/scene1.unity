@@ -702,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcd7cdc197687d44900edc525ec98cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tempForPlay: .100000001
   accelaration: 1
   speed: 1
   maxSpeed: 10
@@ -1569,6 +1570,10 @@ Prefab:
     - target: {fileID: 6100000, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
       propertyPath: m_IsTrigger
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400002, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
+      propertyPath: tempForPlay
+      value: .100000001
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5000000, guid: bb7a056ee5d051446a2a2e55abc7845e, type: 2}
