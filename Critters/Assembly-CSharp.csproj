@@ -46,9 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\TestGUI.cs" />
-     <Compile Include="Assets\character.cs" />
-     <Compile Include="Assets\player.cs" />
+     <Compile Include="Assets\Scripts\CharAnimImpl.cs" />
+     <Compile Include="Assets\Scripts\TestGUI.cs" />
+     <Compile Include="Assets\Scripts\character.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

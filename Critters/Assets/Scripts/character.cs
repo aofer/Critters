@@ -22,12 +22,12 @@ public class character : MonoBehaviour {
 	private bool isJumping = false;
 	private bool isInAir = true;
 	
-	private Animator anim;
+	private CharAnimImpl charAnimImplScript;
 	
 	// Use this for initialization
 	void Start () {
 		restartSpeed = speed;
-		anim = GetComponent<Animator>();
+		charAnimImplScript = GetComponent<CharAnimImpl>();
 	}
 	
 	// Update is called once per frame
@@ -41,8 +41,7 @@ public class character : MonoBehaviour {
 			scale_x = -1;
 			transform.Translate(new Vector2(velocity_x, 0));
 			
-			anim.SetBool("isWalking", false);
-			anim.SetBool("isWalkingLeft", true);
+			charAnimImplScript.setAnimation("walk_left");
 		}
 
 		if(Input.GetKey("right")){
@@ -51,15 +50,8 @@ public class character : MonoBehaviour {
 			scale_x = 1;
 			transform.Translate(new Vector2(velocity_x,0));
 			
-			anim.SetBool("isWalking", true);
-			anim.SetBool("isWalkingLeft", false);
+			charAnimImplScript.setAnimation("walk_right");
 		}
-		
-		if(Input.GetKey("left") || Input.GetKey("right")){
-			anim.SetBool("isIdleLeft", false);
-			anim.SetBool("isIdle", false);
-		}
-		
 		
 		if(isJumping){
 				transform.Translate(new Vector2(velocity_x,velocity_y));
@@ -81,16 +73,11 @@ public class character : MonoBehaviour {
 			speed = restartSpeed;
 			scale_x = 0;
 			
-			anim.SetBool("isWalking", false);
-			anim.SetBool("isWalkingLeft", false);
-			
 			if(Input.GetKeyUp("left")){
-				anim.SetBool("isIdleLeft", true);
-				anim.SetBool("isIdle", false);
+				charAnimImplScript.setAnimation("idle_left");
 			}
 			if(Input.GetKeyUp("right")){
-				anim.SetBool("isIdle", true);
-				anim.SetBool("isIdleLeft", false);
+				charAnimImplScript.setAnimation("idle_right");
 			}
 		}
 		
