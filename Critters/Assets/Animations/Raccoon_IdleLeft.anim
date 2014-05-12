@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Idle
+  m_Name: Raccoon_IdleLeft
   serializedVersion: 4
   m_AnimationType: 2
   m_Compressed: 0
@@ -18,12 +18,12 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300018, guid: 297d020ebcb4da14da253f82f7036efe, type: 3}
+      value: {fileID: 21300030, guid: 5f34a95a3b444e9439f3e9f58ac8e5c4, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 1
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -31,7 +31,7 @@ AnimationClip:
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
-    m_StopTime: 1
+    m_StopTime: .0166666675
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

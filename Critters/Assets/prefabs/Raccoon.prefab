@@ -10,11 +10,13 @@ GameObject:
   - 4: {fileID: 400000}
   - 212: {fileID: 21200000}
   - 61: {fileID: 6100000}
-  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400000}
   - 95: {fileID: 9500000}
   - 50: {fileID: 5000000}
+  - 114: {fileID: 11400002}
+  - 114: {fileID: 11400004}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Raccoon
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,12 +68,12 @@ Animator:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3990c8a4b701c1547b2fd64093197fc7, type: 2}
+  m_Controller: {fileID: 9100000, guid: c0473ccd793bd2847a8b3dc77032111d, type: 2}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
   m_AnimatePhysics: 1
   m_HasTransformHierarchy: 1
---- !u!114 &11400002
+--- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -84,10 +86,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tempForPlay: .100000001
   accelaration: 1
-  speed: 1
-  maxSpeed: 10
-  gravity: .00999999978
-  jumpHeight: .300000012
+  speed: .5
+  maxSpeed: 3
+  gravity: .0109999999
+  jumpHeight: .280000001
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6757d08ec356d154c8804aadea55e588, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400004
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558e64c917f25884ba3ad271d36d2c87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -109,7 +133,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_SortingLayerID: 3747094791
-  m_Sprite: {fileID: 21300018, guid: 297d020ebcb4da14da253f82f7036efe, type: 3}
+  m_Sprite: {fileID: 21300034, guid: c1b9eeca4315c4b439db2d5546fe338c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

@@ -1,0 +1,193 @@
+fileFormatVersion: 2
+guid: 5f34a95a3b444e9439f3e9f58ac8e5c4
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: raccoon spriteSheet1flipped_0
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 930
+        width: 213
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_1
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 932
+        width: 216
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_2
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 932
+        width: 210
+        height: 92
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 949
+        width: 213
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_4
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 702
+        width: 217
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_5
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 700
+        width: 219
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_6
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 695
+        width: 218
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_7
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 697
+        width: 213
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 700
+        width: 215
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_9
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 466
+        width: 211
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_10
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 483
+        width: 216
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_11
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 471
+        width: 219
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_12
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 467
+        width: 216
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_13
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 463
+        width: 216
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_14
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 230
+        width: 215
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1flipped_15
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 232
+        width: 142
+        height: 163
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

@@ -1,0 +1,211 @@
+fileFormatVersion: 2
+guid: c1b9eeca4315c4b439db2d5546fe338c
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: raccoon spriteSheet1_0
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 923
+        width: 217
+        height: 83
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_1
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 930
+        width: 199
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_2
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 932
+        width: 216
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_3
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 932
+        width: 214
+        height: 92
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_4
+      rect:
+        serializedVersion: 2
+        x: 1283
+        y: 949
+        width: 213
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 702
+        width: 217
+        height: 99
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_6
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 700
+        width: 219
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_7
+      rect:
+        serializedVersion: 2
+        x: 636
+        y: 695
+        width: 218
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_8
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 697
+        width: 213
+        height: 98
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_9
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 700
+        width: 215
+        height: 86
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_10
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 466
+        width: 211
+        height: 93
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_11
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 483
+        width: 216
+        height: 88
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_12
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 471
+        width: 219
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_13
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 467
+        width: 216
+        height: 95
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_14
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 463
+        width: 216
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_15
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 230
+        width: 215
+        height: 94
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_16
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 232
+        width: 193
+        height: 124
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: raccoon spriteSheet1_17
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 232
+        width: 142
+        height: 163
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

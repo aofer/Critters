@@ -35,7 +35,7 @@ public class character : MonoBehaviour {
 	
 		velocity_x = (speed * scale_x * Time.deltaTime);
 	
-		if(Input.GetKey("left")){
+		if(Input.GetAxis("Horizontal") < 0){
 			if(speed <= maxSpeed)
 				speed += accelaration;
 			scale_x = -1;
@@ -44,7 +44,7 @@ public class character : MonoBehaviour {
 			charAnimImplScript.setAnimation("walk_left");
 		}
 
-		if(Input.GetKey("right")){
+		if(Input.GetAxis("Horizontal") > 0){
 			if(speed <= maxSpeed)
 				speed += accelaration;
 			scale_x = 1;
@@ -69,16 +69,17 @@ public class character : MonoBehaviour {
 	
 	void Update(){
 		
-		if(Input.GetKeyUp("left") || Input.GetKeyUp("right")){
+		if(Input.GetAxis("Horizontal") == 0){
 			speed = restartSpeed;
-			scale_x = 0;
 			
-			if(Input.GetKeyUp("left")){
+			if(scale_x == -1){
 				charAnimImplScript.setAnimation("idle_left");
 			}
-			if(Input.GetKeyUp("right")){
+			if(scale_x == 1){
 				charAnimImplScript.setAnimation("idle_right");
 			}
+			
+			scale_x = 0;
 		}
 		
 		if(Input.GetKeyDown("space") && !isJumping){
@@ -101,6 +102,7 @@ public class character : MonoBehaviour {
 		}
 	}
 	
+	//TO-DO - There is no actual formula to the borders... it is kind of hard coded at the moment
 	void OnTriggerStay2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Wall")){
 			if(other.transform.localPosition.x < 0){
@@ -129,15 +131,11 @@ public class character : MonoBehaviour {
 	}
 	
 	public string getVelocityX(){
-//		if(velocity_x != null)
 			return velocity_x.ToString();
-//		return "Currently Null";
 	}
 	
 	public string getVelocityY(){
-//		if(velocity_y != null)
 			return velocity_y.ToString();
-//		return "Currently Null";
 	}
 	
 
