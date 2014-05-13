@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 
 
@@ -22,20 +23,47 @@ public class character : MonoBehaviour {
 	private bool isJumping = false;
 	private bool isInAir = true;
 	
+	private Dictionary<int,Dictionary<string,string>> playerInputByNumber = new Dictionary<int,Dictionary<string,string>>();
+	private string tempHor = "";
+	private string tempVer = "";
+	private string tempJump = "";
+	
 	private CharAnimImpl charAnimImplScript;
+	private Player playerScript;
 	
 	// Use this for initialization
 	void Start () {
+	
+		Dictionary<string,string> player1 = new Dictionary<string,string>();
+		player1.Add("Hor","Horizontal");
+		player1.Add("Ver","Vertical");
+		player1.Add ("Jump","Jump");
+		playerInputByNumber.Add(1,player1);
+		
+		Dictionary<string,string> player2 = new Dictionary<string,string>();
+		player2.Add("Hor","Horizontal2");
+		player2.Add("Ver","Vertical2");
+		player2.Add ("Jump","Jump2");
+		playerInputByNumber.Add(2,player2);
+		
 		restartSpeed = speed;
 		charAnimImplScript = GetComponent<CharAnimImpl>();
+		playerScript = GetComponent<Player>();
+		
+		Dictionary<string,string> tempDict;;
+		playerInputByNumber.TryGetValue(playerScript.getPlayerNumber(), out tempDict);
+		tempDict.TryGetValue("Hor",out tempHor);
+		tempDict.TryGetValue("Ver",out tempVer);
+		tempDict.TryGetValue("Jump",out tempJump);
+		
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
 	
 		velocity_x = (speed * scale_x * Time.deltaTime);
-	
-		if(Input.GetAxis("Horizontal") < 0){
+		
+		if(Input.GetAxis(tempHor) < 0){
 			if(speed <= maxSpeed)
 				speed += accelaration;
 			scale_x = -1;
@@ -44,7 +72,7 @@ public class character : MonoBehaviour {
 			charAnimImplScript.setAnimation("walk_left");
 		}
 
-		if(Input.GetAxis("Horizontal") > 0){
+		if(Input.GetAxis(tempHor) > 0){
 			if(speed <= maxSpeed)
 				speed += accelaration;
 			scale_x = 1;
@@ -69,7 +97,7 @@ public class character : MonoBehaviour {
 	
 	void Update(){
 		
-		if(Input.GetAxis("Horizontal") == 0){
+		if(Input.GetAxis(tempHor) == 0){
 			speed = restartSpeed;
 			
 			if(scale_x == -1){
@@ -82,7 +110,7 @@ public class character : MonoBehaviour {
 			scale_x = 0;
 		}
 		
-		if(Input.GetKeyDown("space") && !isJumping){
+		if(Input.GetButtonDown(tempJump) && !isJumping){
 			isJumping = true;
 			isInAir = true;
 		}
