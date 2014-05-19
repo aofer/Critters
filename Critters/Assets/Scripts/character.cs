@@ -9,11 +9,11 @@ public class character : MonoBehaviour {
 
 	public float tempForPlay = 0.0f;
 
-	public float accelaration = 2.0f;
-	public float speed = 20.0f;
-	public float maxSpeed = 100.0f;
-	public float gravity = 300.0f;
-	public float jumpHeight = 1000.0f;
+	public float accelaration = 1.0f;
+	public float speed = 0.5f;
+	public float maxSpeed = 3.0f;
+	public float gravity = 0.011f;
+	public float jumpHeight = 0.28f;
 	
 	private float scale_x;
 	private float scale_y;
