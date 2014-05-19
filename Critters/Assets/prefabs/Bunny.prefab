@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fcd7cdc197687d44900edc525ec98cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempForPlay: .100000001
+  tempForPlay: 0
   accelaration: 1
   speed: .5
   maxSpeed: 3
