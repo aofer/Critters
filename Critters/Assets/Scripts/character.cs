@@ -22,6 +22,7 @@ public class character : MonoBehaviour {
 	private float restartSpeed;
 	private bool isJumping = false;
 	private bool isInAir = true;
+	private bool isDead = false;
 	
 	private Dictionary<int,Dictionary<string,string>> playerInputByNumber = new Dictionary<int,Dictionary<string,string>>();
 	private string tempHor = "";
@@ -86,12 +87,17 @@ public class character : MonoBehaviour {
 				velocity_y = velocity_y - gravity;
 		}
 		
-		if(isInAir){
+		if(isInAir && !isDead){
 			velocity_y -= gravity;
    			transform.Translate(new Vector2(velocity_x,velocity_y));
 		} else {
 			if(velocity_y != jumpHeight)
 				velocity_y = jumpHeight;
+		}
+		
+		if(isDead){
+			velocity_x = 0;
+			velocity_y = 0;
 		}
 	}
 	
@@ -115,6 +121,10 @@ public class character : MonoBehaviour {
 			isInAir = true;
 		}
 	
+	}
+	
+	public void setIsDead(bool value){
+		isDead = value;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){

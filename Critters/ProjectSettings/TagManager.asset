@@ -6,6 +6,14 @@ TagManager:
   - Floor
   - Wall
   - Ceiling
+  - Pool 1
+  - Pool 2
+  - Spawn Point
+  - Script Holder
+  - Player
+  - Player Feet
+  - 
+  - 
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
