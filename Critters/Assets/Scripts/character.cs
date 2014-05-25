@@ -61,64 +61,66 @@ public class character : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if(!isDead){
+			velocity_x = (speed * scale_x * Time.deltaTime);
+			
+			if(Input.GetAxis(tempHor) < 0){
+				if(speed <= maxSpeed)
+					speed += accelaration;
+				scale_x = -1;
+				transform.Translate(new Vector2(velocity_x, 0));
+				
+				charAnimImplScript.setAnimation("walk_left");
+			}
 	
-		velocity_x = (speed * scale_x * Time.deltaTime);
-		
-		if(Input.GetAxis(tempHor) < 0){
-			if(speed <= maxSpeed)
-				speed += accelaration;
-			scale_x = -1;
-			transform.Translate(new Vector2(velocity_x, 0));
+			if(Input.GetAxis(tempHor) > 0){
+				if(speed <= maxSpeed)
+					speed += accelaration;
+				scale_x = 1;
+				transform.Translate(new Vector2(velocity_x,0));
+				
+				charAnimImplScript.setAnimation("walk_right");
+			}
 			
-			charAnimImplScript.setAnimation("walk_left");
-		}
-
-		if(Input.GetAxis(tempHor) > 0){
-			if(speed <= maxSpeed)
-				speed += accelaration;
-			scale_x = 1;
-			transform.Translate(new Vector2(velocity_x,0));
+			if(isJumping){
+					transform.Translate(new Vector2(velocity_x,velocity_y));
+					velocity_y = velocity_y - gravity;
+			}
 			
-			charAnimImplScript.setAnimation("walk_right");
-		}
-		
-		if(isJumping){
-				transform.Translate(new Vector2(velocity_x,velocity_y));
-				velocity_y = velocity_y - gravity;
-		}
-		
-		if(isInAir && !isDead){
-			velocity_y -= gravity;
-   			transform.Translate(new Vector2(velocity_x,velocity_y));
-		} else {
-			if(velocity_y != jumpHeight)
-				velocity_y = jumpHeight;
-		}
-		
-		if(isDead){
-			velocity_x = 0;
-			velocity_y = 0;
+			if(isInAir){
+				velocity_y -= gravity;
+	   			transform.Translate(new Vector2(velocity_x,velocity_y));
+			} else {
+				if(velocity_y != jumpHeight)
+					velocity_y = jumpHeight;
+			}
+			
+			if(isDead){
+				velocity_x = 0;
+				velocity_y = 0;
+			}
 		}
 	}
 	
 	void Update(){
-		
-		if(Input.GetAxis(tempHor) == 0){
-			speed = restartSpeed;
-			
-			if(scale_x == -1){
-				charAnimImplScript.setAnimation("idle_left");
+		if(!isDead){
+			if(Input.GetAxis(tempHor) == 0){
+				speed = restartSpeed;
+				
+				if(scale_x == -1){
+					charAnimImplScript.setAnimation("idle_left");
+				}
+				if(scale_x == 1){
+					charAnimImplScript.setAnimation("idle_right");
+				}
+				
+				scale_x = 0;
 			}
-			if(scale_x == 1){
-				charAnimImplScript.setAnimation("idle_right");
-			}
 			
-			scale_x = 0;
-		}
-		
-		if(Input.GetButtonDown(tempJump) && !isJumping){
-			isJumping = true;
-			isInAir = true;
+			if(Input.GetButtonDown(tempJump) && !isJumping){
+				isJumping = true;
+				isInAir = true;
+			}
 		}
 	
 	}
@@ -142,20 +144,22 @@ public class character : MonoBehaviour {
 	
 	//TO-DO - There is no actual formula to the borders... it is kind of hard coded at the moment
 	void OnTriggerStay2D(Collider2D other){
-		if(other.gameObject.tag.Equals("Wall")){
-			if(other.transform.localPosition.x < 0){
-				transform.position = new Vector2(other.transform.position.x + other.transform.lossyScale.x
-				                                 + transform.lossyScale.x/2,transform.position.y);
+		if(!isDead){
+			if(other.gameObject.tag.Equals("Wall")){
+				if(other.transform.localPosition.x < 0){
+					transform.position = new Vector2(other.transform.position.x + other.transform.lossyScale.x
+					                                 + transform.lossyScale.x/2,transform.position.y);
+				}
+				if(other.transform.localPosition.x > 0){
+					transform.position = new Vector2(other.transform.position.x - other.transform.lossyScale.x*1.5f
+					                                 + transform.lossyScale.x/2,transform.position.y);
+				}
+				
 			}
-			if(other.transform.localPosition.x > 0){
-				transform.position = new Vector2(other.transform.position.x - other.transform.lossyScale.x*1.5f
-				                                 + transform.lossyScale.x/2,transform.position.y);
+			if(other.gameObject.tag.Equals("Floor")){
+				transform.position = new Vector2(transform.position.x,other.transform.position.y + 
+				                                 other.transform.lossyScale.y/2 + transform.lossyScale.y/2  + 0.1f);
 			}
-			
-		}
-		if(other.gameObject.tag.Equals("Floor")){
-			transform.position = new Vector2(transform.position.x,other.transform.position.y + 
-			                                 other.transform.lossyScale.y/2 + transform.lossyScale.y/2  + 0.1f);
 		}
 	}
 	

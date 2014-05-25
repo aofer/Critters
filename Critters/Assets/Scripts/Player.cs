@@ -7,6 +7,7 @@ public class Player : MonoBehaviour {
 	
 	private int playerNumber = 0;
 	private string playerCharacter = "none";
+	private bool outOfGame = false;
 
 	void OnAwake () {	
 	
@@ -14,6 +15,8 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(lives <= 0)
+			outOfGame = true;
 	}
 	
 	public void setPlayerNumber(int num){
@@ -53,7 +56,7 @@ public class Player : MonoBehaviour {
 		GetComponent<character>().setIsDead(true);
 		GameObject playerPool = GameObject.FindGameObjectWithTag("Pool " + playerNumber);
 		transform.position = playerPool.transform.position;
-		if(lives > 0){
+		if(!outOfGame){
 			Invoke("respawn",5);
 		}
 	}

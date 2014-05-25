@@ -14,9 +14,9 @@ public class testFeet : MonoBehaviour {
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
-		if(other.gameObject.tag.Equals("Player") && !transform.IsChildOf(other.transform)){
+		if(other.gameObject.tag.Equals("Player Head") && !transform.IsChildOf(other.transform)){
 			print ("hit");
-			Player othPlayerScript = other.GetComponent<Player>();
+			Player othPlayerScript = other.transform.parent.GetComponent<Player>();
 			othPlayerScript.die();
 		}
 	}
