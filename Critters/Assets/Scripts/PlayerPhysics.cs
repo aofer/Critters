@@ -47,10 +47,10 @@ public class PlayerPhysics : MonoBehaviour {
 			falling = true;
 		}
 		if (isOnGround || falling) {
-			Vector2 startPoint = new Vector2(box.xMin + margin, box.center.y);
-			Vector2 endPoint = new Vector2(box.xMax - margin, box.center.y);
+			Vector3 startPoint = new Vector3(box.xMin + margin, box.center.y,transform.position.z);
+			Vector3 endPoint = new Vector3(box.xMax - margin, box.center.y, transform.position.z);
 
-			RaycastHit2D hitInfo;
+			RaycastHit hitInfo;
 
 			float distance = box.height / 2 + (isOnGround? margin : Mathf.Abs(velocity.y * Time.deltaTime));
 
@@ -58,17 +58,17 @@ public class PlayerPhysics : MonoBehaviour {
 
 			for (int i = 0 ; i < verticalRays ; i++){
 				float lerpAmount = (float)i / (float) verticalRays - 1;
-				Vector2 origin = Vector2.Lerp(startPoint, endPoint, lerpAmount);
-				Ray2D ray = new Ray2D(origin, -Vector2.up);
+				Vector3 origin = Vector3.Lerp(startPoint, endPoint, lerpAmount);
+				Ray ray = new Ray(origin, Vector3.down);
 
-				hitInfo = Physics2D.Raycast(origin, -Vector2.up, distance, layerMask);
+				isConnected = Physics.Raycast(ray, out hitInfo, distance, layerMask);
 
-				if (hitInfo != null){
-					isConnected = true;
+				if (isConnected){
 					isOnGround = true;
 					falling = false;
-					float distanceToHit = Mathf.Abs(hitInfo.point.y - box.center.y);
-					transform.Translate(-Vector2.up * distanceToHit);
+					transform.Translate(Vector3.down * (hitInfo.distance - box.height/2));
+					velocity = new Vector2(velocity.x, 0);
+					break;
 				}
 			}
 			if (!isConnected){
