@@ -93,15 +93,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1fcd7cdc197687d44900edc525ec98cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 33524a512f27f5b47aad34a978219db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempForPlay: 0
-  accelaration: 1
-  speed: .5
-  maxSpeed: 3
-  gravity: .0109999999
-  jumpHeight: .280000001
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

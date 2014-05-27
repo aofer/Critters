@@ -131,7 +131,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 22538381}
   - 212: {fileID: 22538382}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -223,7 +223,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 39369442}
   - 212: {fileID: 39369443}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -354,7 +354,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 378065396}
   - 212: {fileID: 378065397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +657,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 558194528}
   - 212: {fileID: 558194529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -759,7 +759,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 596404863}
   - 212: {fileID: 596404864}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -810,7 +810,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 643981408}
   - 212: {fileID: 643981409}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,7 +1046,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 804982218}
   - 212: {fileID: 804982217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1148,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 819393620}
   - 212: {fileID: 819393621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1367,7 +1367,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 972492488}
   - 212: {fileID: 972492489}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1469,7 +1469,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1004727256}
   - 212: {fileID: 1004727257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1673,7 +1673,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1095286083}
   - 212: {fileID: 1095286084}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1724,7 +1724,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1126224789}
   - 212: {fileID: 1126224788}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +1900,73 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 100028, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5000000, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
+    - {fileID: 6100000, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: b9f7247f630cc9c42bddd8c8ded358df, type: 2}
   m_RootGameObject: {fileID: 1731817372}
   m_IsPrefabParent: 0
@@ -2230,7 +2296,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1359002647}
   - 212: {fileID: 1359002648}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2959,9 +3025,9 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1731817373}
-  - 61: {fileID: 1731817374}
-  - 50: {fileID: 1731817375}
-  m_Layer: 0
+  - 65: {fileID: 1731817374}
+  - 54: {fileID: 1731817375}
+  m_Layer: 8
   m_Name: Map Floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2994,33 +3060,32 @@ Transform:
   - {fileID: 558194528}
   - {fileID: 2030965963}
   m_Father: {fileID: 0}
---- !u!61 &1731817374
-BoxCollider2D:
+--- !u!65 &1731817374
+BoxCollider:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6100000, guid: b9f7247f630cc9c42bddd8c8ded358df,
-    type: 2}
-  m_PrefabInternal: {fileID: 1153375106}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731817372}
-  m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Size: {x: 20.8068752, y: 1.12308025}
-  m_Center: {x: .0639848709, y: .0165400505}
---- !u!50 &1731817375
-Rigidbody2D:
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &1731817375
+Rigidbody:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 5000000, guid: b9f7247f630cc9c42bddd8c8ded358df,
-    type: 2}
-  m_PrefabInternal: {fileID: 1153375106}
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1731817372}
-  m_Mass: 9.99999975e-05
-  m_LinearDrag: 0
-  m_AngularDrag: 0
-  m_GravityScale: 0
-  m_FixedAngle: 1
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &1771346477
 GameObject:
@@ -3189,7 +3254,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1948077485}
   - 212: {fileID: 1948077486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3590,7 +3655,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2030965963}
   - 212: {fileID: 2030965964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform Mid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
