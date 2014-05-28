@@ -12,7 +12,6 @@ public class Player : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print (playerNumber);
 	}
 	
 	public void setPlayerNumber(int num){

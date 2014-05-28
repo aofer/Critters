@@ -19,7 +19,6 @@ public class PlayerSpawner : MonoBehaviour {
 		Player playerScript1 = playerList[0].GetComponent<Player>();
 		foreach(GameObject player in playerList){
 			Player playerScript = player.GetComponent<Player>();
-			Debug.Log(player.name + " >> " + playerScript);
 			if(playerScript.getPlayerNumber() == 0){
 				playerScript.setPlayerNumber(i);
 				i++;

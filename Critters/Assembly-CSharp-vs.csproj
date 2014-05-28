@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\PlayerPhysics.cs" />
      <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
      <Compile Include="Assets\Scripts\TestGUI.cs" />
+     <Compile Include="Assets\Scripts\TestRay.cs" />
      <Compile Include="Assets\Scripts\character.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
