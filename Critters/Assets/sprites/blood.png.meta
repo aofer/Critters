@@ -1,0 +1,103 @@
+fileFormatVersion: 2
+guid: bb7a63d79cc8bb04b962d4fdc881966f
+TextureImporter:
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 4096
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings:
+  - buildTarget: iPhone
+    maxTextureSize: 1024
+    textureFormat: -2
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: blood_0
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 200
+        width: 208
+        height: 182
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: blood_1
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 205
+        width: 245
+        height: 215
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: blood_2
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 191
+        width: 280
+        height: 255
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: blood_3
+      rect:
+        serializedVersion: 2
+        x: 1660
+        y: 194
+        width: 294
+        height: 252
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: blood_4
+      rect:
+        serializedVersion: 2
+        x: 2173
+        y: 178
+        width: 297
+        height: 269
+      alignment: 0
+      pivot: {x: .5, y: .5}
+    - name: blood_5
+      rect:
+        serializedVersion: 2
+        x: 2684
+        y: 160
+        width: 306
+        height: 287
+      alignment: 0
+      pivot: {x: .5, y: .5}
+  spritePackingTag: 
+  userData: 

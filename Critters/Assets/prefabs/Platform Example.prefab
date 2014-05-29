@@ -222,7 +222,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 100010}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Poly:
     m_Paths:
     - - {x: .00204753876, y: .667353749}
@@ -239,7 +239,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 100000}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Size: {x: 3.09925365, y: .210162163}
   m_Center: {x: -.0439381599, y: .394918919}
 --- !u!212 &21200000

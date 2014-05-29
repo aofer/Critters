@@ -13,7 +13,8 @@ TagManager:
   - Player
   - Player Feet
   - Player Head
-  - 
+  - Score GUI
+  - World Anim
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
