@@ -14,6 +14,7 @@ public class character : MonoBehaviour {
 	public float maxSpeed = 3.0f;
 	public float gravity = 0.011f;
 	public float jumpHeight = 0.28f;
+	public float bounceHeight = 0.14f;
 	
 	private float scale_x;
 	private float scale_y;
@@ -21,6 +22,8 @@ public class character : MonoBehaviour {
 	private float velocity_y;
 	private float restartSpeed;
 	private bool isJumping = false;
+	private bool isBouncingAfterKill = false;
+	private bool hasBounced = false;
 	private bool isInAir = true;
 	private bool isDead = false;
 	
@@ -83,8 +86,19 @@ public class character : MonoBehaviour {
 			}
 			
 			if(isJumping){
-					transform.Translate(new Vector2(velocity_x,velocity_y));
-					velocity_y = velocity_y - gravity;
+				transform.Translate(new Vector2(velocity_x,velocity_y));
+				velocity_y = velocity_y - gravity;
+			}
+			
+			if(isBouncingAfterKill){
+				if(!hasBounced){
+					velocity_y = bounceHeight;
+					hasBounced = true;
+					print ("should appear once");
+				}
+				isJumping = false;
+//				transform.Translate(new Vector2(velocity_x,velocity_y));
+				velocity_y = velocity_y - gravity;
 			}
 			
 			if(isInAir){
@@ -95,10 +109,9 @@ public class character : MonoBehaviour {
 					velocity_y = jumpHeight;
 			}
 			
-			if(isDead){
-				velocity_x = 0;
-				velocity_y = 0;
-			}
+		} else {
+			velocity_x = 0;
+			velocity_y = 0;
 		}
 	}
 	
@@ -129,13 +142,20 @@ public class character : MonoBehaviour {
 		isDead = value;
 	}
 	
+	public void setBounceOffKillTrue(){
+		isBouncingAfterKill = true;
+	}
+	
 	void OnTriggerEnter2D(Collider2D other){
 		if(other.gameObject.tag.Equals("Floor")){
 			isInAir = false;
 			isJumping = false;
+			isBouncingAfterKill = false;
+			hasBounced = false;
 		}
 		if(other.gameObject.tag.Equals("Ceiling")){
 			isJumping = false;
+			isBouncingAfterKill = false;
 			if(velocity_y > 0){
 				velocity_y = 0;
 			}
