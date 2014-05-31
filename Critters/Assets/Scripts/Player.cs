@@ -9,10 +9,12 @@ public class Player : MonoBehaviour {
 	private string playerCharacter = "none";
 	private bool outOfGame = false;
 	private worldAnimImpl worldScript;
+	private AudioSource audSrc;
 
 	void Start () {	
 		GameObject worldAnim = GameObject.FindGameObjectWithTag("World Anim");
 		worldScript = worldAnim.GetComponent<worldAnimImpl>();
+		audSrc = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -63,6 +65,7 @@ public class Player : MonoBehaviour {
 		GameObject playerPool = GameObject.FindGameObjectWithTag("Pool " + playerNumber);
 		worldScript.setAnimation("blood_splatter", transform.position);
 		transform.position = playerPool.transform.position;
+		audSrc.Play ();
 		if(!outOfGame){
 			Invoke("respawn",5);
 		}

@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
      <Compile Include="Assets\Scripts\TestGUI.cs" />
      <Compile Include="Assets\Scripts\character.cs" />
+     <Compile Include="Assets\Scripts\musicHandler.cs" />
      <Compile Include="Assets\Scripts\testFeet.cs" />
      <Compile Include="Assets\Scripts\worldAnimImpl.cs" />
   </ItemGroup>
