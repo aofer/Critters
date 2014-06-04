@@ -47,9 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CharAnimImpl.cs" />
+     <Compile Include="Assets\Scripts\CharacterController.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerPhysics.cs" />
      <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
+     <Compile Include="Assets\Scripts\RayCastingCollisionDetection.cs" />
      <Compile Include="Assets\Scripts\TestGUI.cs" />
      <Compile Include="Assets\Scripts\TestRay.cs" />
      <Compile Include="Assets\Scripts\character.cs" />
