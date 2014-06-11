@@ -11,6 +11,8 @@ public class CharacterController : MonoBehaviour {
 	float maxfall = 5f;
 	float jump = 200f;
 
+	float horizontalMove = 0.0f;
+
 	private RayCastingCollisionDetection _rayCastingController;
 	private Vector3 _velocity;
 
@@ -22,7 +24,7 @@ public class CharacterController : MonoBehaviour {
 	} 
 
 	void update(){
-
+		horizontalMove = Input.GetAxisRaw ("Horizontal");
 	}
 
 	void FixedUpdate() {
@@ -33,11 +35,10 @@ public class CharacterController : MonoBehaviour {
 			newVelocityY = Mathf.Max (_velocity.y - gravity, - maxfall);
 		}
 
-
-		float horizontalAxis = Input.GetAxisRaw ("Horizontal");
+		
 		float newVelocityX = _velocity.x;
-		if (horizontalAxis != 0) {
-			newVelocityX += acceleration * horizontalAxis;
+		if (horizontalMove != 0) {
+			newVelocityX += acceleration * horizontalMove;
 			newVelocityX = Mathf.Clamp (newVelocityX, -maxSpeed, maxSpeed);
 		} else if (_velocity.x != 0) {
 			int modifier = _velocity.x > 0 ? -1 : 1;
@@ -47,10 +48,10 @@ public class CharacterController : MonoBehaviour {
 		print ("move before raycastCollisionDetection:" +  _velocity);
 		_velocity = _rayCastingController.Move (_velocity, gameObject);
 		print ("move after raycastCollisionDetection:" +  _velocity);
-		transform.Translate (_velocity * Time.deltaTime);
+
 	}
 	
 	void LateUpdate(){
-				
+		transform.Translate (_velocity * Time.deltaTime);				
 	}
 }
